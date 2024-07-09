@@ -25,12 +25,16 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\FSISMBDataModelAnchor\FSISMBDataModelAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSISMBDataModel\FSISMBDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
+    <ProjectReference Include="..\FSISMBDataModelAnchor\FSISMBDataModelAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSISMBDataModel\FSISMBDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
   </ItemGroup>
 
 </Project>

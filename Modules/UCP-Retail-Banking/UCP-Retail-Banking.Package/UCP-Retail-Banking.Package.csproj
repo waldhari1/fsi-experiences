@@ -57,20 +57,24 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\FSIRetailBankingCoreComponents\FSIRetailBankingCoreComponents.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIRetailBankingCoreControls\FSIRetailBankingCoreControls.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIUnifiedCustomerProfileSecurityRoles\FSIUnifiedCustomerProfileSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIUnifiedCustomerProfile\FSIUnifiedCustomerProfile.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIUnifiedCustomerProfileAnchor\FSIUnifiedCustomerProfileAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesCommonDataModel\FSIFinancialServicesCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\Banking-Data-Model\FSIRetailBankingCoreDataModel\FSIRetailBankingCoreDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\Banking-Data-Model\FSICoreRetailBankingSecurityRoles\FSICoreRetailBankingSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\Banking-Data-Model\FSICommonSecurityRoles\FSICommonSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesConfiguration\FSIFinancialServicesConfiguration.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
+    <ProjectReference Include="..\FSIRetailBankingCoreComponents\FSIRetailBankingCoreComponents.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIRetailBankingCoreControls\FSIRetailBankingCoreControls.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIUnifiedCustomerProfileSecurityRoles\FSIUnifiedCustomerProfileSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIUnifiedCustomerProfile\FSIUnifiedCustomerProfile.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIUnifiedCustomerProfileAnchor\FSIUnifiedCustomerProfileAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesCommonDataModel\FSIFinancialServicesCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\Banking-Data-Model\FSIRetailBankingCoreDataModel\FSIRetailBankingCoreDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\Banking-Data-Model\FSICoreRetailBankingSecurityRoles\FSICoreRetailBankingSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\Banking-Data-Model\FSICommonSecurityRoles\FSICommonSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesConfiguration\FSIFinancialServicesConfiguration.csproj" Condition="'$(TF_BUILD)' == 'False'" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
   </ItemGroup>
 
 </Project>

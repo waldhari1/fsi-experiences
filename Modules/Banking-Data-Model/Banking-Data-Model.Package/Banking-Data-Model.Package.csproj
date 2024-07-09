@@ -37,15 +37,19 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\FSIRetailBankingCoreDataModel\FSIRetailBankingCoreDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIRetailBankingDataModelAnchor\FSIRetailBankingDataModelAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIFinancialServicesCommonDataModel\FSIFinancialServicesCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSILoanOnboardingDataModel\FSILoanOnboardingDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSICoreRetailBankingSecurityRoles\FSICoreRetailBankingSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
+    <ProjectReference Include="..\FSIRetailBankingCoreDataModel\FSIRetailBankingCoreDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIRetailBankingDataModelAnchor\FSIRetailBankingDataModelAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIFinancialServicesCommonDataModel\FSIFinancialServicesCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSILoanOnboardingDataModel\FSILoanOnboardingDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSICoreRetailBankingSecurityRoles\FSICoreRetailBankingSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
   </ItemGroup>
 
 </Project>

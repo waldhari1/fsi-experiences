@@ -1,0 +1,181 @@
+# Query: PublicKeyToken=null
+# ContextLines: 1
+
+41 results - 24 files
+
+README.md:
+  262  5. Follow the steps [here](https://learn.microsoft.com/en-us/dotnet/standard/assembly/sign-strong-name?source=recommendations#create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio) to sign the assemblies (.Plugins.csproj files found under the Modules directory) using Visual Studio. The strong name key file path should point to your key pair file, i.e., `$(MSBuildThisFileDirectory)\build\config\key.snk`.
+  263: 6. Using Visual Studio Code, search for *"PublicKeyToken=ae4d7facd40d7d13"*, and replace all results with the public key token extracted previously in step 4, *i.e, PublicKeyToken=<extracted_public_key_token>*.
+  264  
+
+Modules\Banking-Data-Model\FSIRetailBankingCoreDataModel\Other\Solution.xml:
+  164        <RootComponent type="61" schemaName="msfsi_PluginResources/RetailBankingLabels.zh-TW.resx" behavior="0" />
+  165:       <RootComponent type="91" id="{e9055ab7-0506-4824-a5cd-7e5184fee639}" schemaName="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" behavior="0" />
+  166        <RootComponent type="92" id="{045cff38-51fb-eb11-94ef-0022482312c1}" behavior="0" />
+
+Modules\Banking-Data-Model\FSIRetailBankingCoreDataModel\PluginAssemblies\MicrosoftCloudForFSIRetailBankingCoreDataModelPlugins-E9055AB7-0506-4824-A5CD-7E5184FEE639\MicrosoftCloudForFSIRetailBankingCoreDataModelPlugins.dll.data.xml:
+   1  <?xml version="1.0" encoding="utf-8"?>
+   2: <PluginAssembly FullName="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginAssemblyId="e9055ab7-0506-4824-a5cd-7e5184fee639" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   3    <IsolationMode>2</IsolationMode>
+
+   7    <PluginTypes>
+   8:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.Group.UpdateGroupPlugin, Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="e7fb3d34-2139-4b98-871f-58946fb77b64" Name="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.Group.UpdateGroupPlugin">
+   9        <FriendlyName>3658208b-337c-4138-ad5a-672f8a93b328</FriendlyName>
+  10      </PluginType>
+  11:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.GroupMember.CreateGroupMemberPlugin, Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="3aba8533-13ee-44c7-bf26-7797c4cee61b" Name="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.GroupMember.CreateGroupMemberPlugin">
+  12        <FriendlyName>fe364ee1-cd2c-4ac9-aa44-8d2484ac5752</FriendlyName>
+  13      </PluginType>
+  14:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.GroupMember.UpdateGroupMemberPlugin, Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="5eec2a21-6bbd-479d-b8c4-43a050badbaa" Name="Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.GroupMember.UpdateGroupMemberPlugin">
+  15        <FriendlyName>38844606-038e-46a7-b18f-2c739ef8872d</FriendlyName>
+
+Modules\Banking-Data-Model\FSIRetailBankingCoreDataModel\SdkMessageProcessingSteps\{045cff38-51fb-eb11-94ef-0022482312c1}.xml:
+  3    <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.GroupMember.UpdateGroupMemberPlugin, Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>5eec2a21-6bbd-479d-b8c4-43a050badbaa</PluginTypeId>
+
+Modules\Banking-Data-Model\FSIRetailBankingCoreDataModel\SdkMessageProcessingSteps\{d102c404-51fb-eb11-94ef-0022482312c1}.xml:
+  3    <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.Group.UpdateGroupPlugin, Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>e7fb3d34-2139-4b98-871f-58946fb77b64</PluginTypeId>
+
+Modules\Banking-Data-Model\FSIRetailBankingCoreDataModel\SdkMessageProcessingSteps\{fd7255f2-50fb-eb11-94ef-0022482312c1}.xml:
+  3    <SdkMessageId>9ebdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins.GroupMember.CreateGroupMemberPlugin, Microsoft.CloudForFSI.RetailBankingCoreDataModel.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>3aba8533-13ee-44c7-bf26-7797c4cee61b</PluginTypeId>
+
+Modules\DocumentIntelligence\FSIDocumentIntelligenceCore\Other\Solution.xml:
+  90        <RootComponent type="29" id="{d406b572-667f-ed11-81ad-0022482a4e0c}" behavior="0" />
+  91:       <RootComponent type="91" id="{a5181d67-3447-40b2-9c0a-1a593d641be7}" schemaName="Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" behavior="0" />
+  92      </RootComponents>
+
+Modules\DocumentIntelligence\FSIDocumentIntelligenceCore\PluginAssemblies\MicrosoftCloudForFSIFSIDocumentIntelligenceCorePlu-A5181D67-3447-40B2-9C0A-1A593D641BE7\MicrosoftCloudForFSIFSIDocumentIntelligenceCorePlu.dll.data.xml:
+   1  <?xml version="1.0" encoding="utf-8"?>
+   2: <PluginAssembly FullName="Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginAssemblyId="a5181d67-3447-40b2-9c0a-1a593d641be7" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   3    <IsolationMode>2</IsolationMode>
+
+   7    <PluginTypes>
+   8:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins.DeleteDocument.DeleteDocumentPlugin, Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="4840838e-a22d-46da-a2fc-ad79b33f7a67" Name="Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins.DeleteDocument.DeleteDocumentPlugin">
+   9        <FriendlyName>f3f9a3d2-39ba-4f77-96d2-200d11e343e2</FriendlyName>
+  10      </PluginType>
+  11:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins.UploadDocument.UploadDocumentPlugin, Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="84e66d07-7855-4a86-9d96-9c2035267fc1" Name="Microsoft.CloudForFSI.FSIDocumentIntelligenceCore.Plugins.UploadDocument.UploadDocumentPlugin">
+  12        <FriendlyName>9bde01d2-d886-404e-a337-328aceb23635</FriendlyName>
+
+Modules\Loan-Onboarding\FSILoanOnboardingStarterRibbon\Other\Solution.xml:
+  86        <RootComponent type="29" id="{a2a38135-ebda-ed11-a7c7-0022482804c6}" behavior="0" />
+  87:       <RootComponent type="91" id="{4108ce2b-fedc-448c-86eb-2c7eafc482d2}" schemaName="Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" behavior="0" />
+  88        <RootComponent type="92" id="{a21f49c1-badc-ed11-a7c7-000d3a57a958}" behavior="0" />
+
+Modules\Loan-Onboarding\FSILoanOnboardingStarterRibbon\PluginAssemblies\MicrosoftCloudForFSILoanOnboardingStarterRibbonPlugin-4108CE2B-FEDC-448C-86EB-2C7EAFC482D2\MicrosoftCloudForFSILoanOnboardingStarterRibbonPlugin.dll.data.xml:
+  1  <?xml version="1.0" encoding="utf-8"?>
+  2: <PluginAssembly FullName="Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginAssemblyId="4108ce2b-fedc-448c-86eb-2c7eafc482d2" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  3    <IsolationMode>2</IsolationMode>
+
+  7    <PluginTypes>
+  8:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins.ApplicationArchivingPlugin, Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="e093af98-42db-4e51-a0fc-49f33ceb9192" Name="Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins.ApplicationArchivingPlugin">
+  9        <FriendlyName>2f477cb7-8a1e-4434-bc1b-c5ce2d6d3b70</FriendlyName>
+
+Modules\Loan-Onboarding\FSILoanOnboardingStarterRibbon\SdkMessageProcessingSteps\{a21f49c1-badc-ed11-a7c7-000d3a57a958}.xml:
+  3    <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins.ApplicationArchivingPlugin, Microsoft.CloudForFSI.LoanOnboardingStarterRibbon.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>e093af98-42db-4e51-a0fc-49f33ceb9192</PluginTypeId>
+
+Modules\Onboarding-Essentials\FSIOnboardingEssentialsBase\Other\Solution.xml:
+  116        <RootComponent type="61" schemaName="msfsi_PluginResources/OnboardingEssentialsBaseLabels.zh-TW.resx" behavior="0" />
+  117:       <RootComponent type="91" id="{3dca3871-d63a-4d88-b183-929ff587ab85}" schemaName="Microsoft.CloudForFSI.OnboardingEssentialsBase.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" behavior="0" />
+  118      </RootComponents>
+
+Modules\Onboarding-Essentials\FSIOnboardingEssentialsBase\PluginAssemblies\MicrosoftCloudForFSIOnboardingEssentialsBasePlugins-3DCA3871-D63A-4D88-B183-929FF587AB85\MicrosoftCloudForFSIOnboardingEssentialsBasePlugins.dll.data.xml:
+  1  <?xml version="1.0" encoding="utf-8"?>
+  2: <PluginAssembly FullName="Microsoft.CloudForFSI.OnboardingEssentialsBase.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginAssemblyId="3dca3871-d63a-4d88-b183-929ff587ab85" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  3    <IsolationMode>2</IsolationMode>
+
+  7    <PluginTypes>
+  8:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.OnboardingEssentialsBase.Plugins.SetProcess.SetProcess, Microsoft.CloudForFSI.OnboardingEssentialsBase.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="545b77c1-9722-4c49-9df1-8cd7f2e1157b" Name="SetProcess">
+  9        <FriendlyName>7cbaeeb9-fe99-4688-a53e-11365d746170</FriendlyName>
+
+Modules\Onboarding-Essentials\FSIOnboardingEssentialsTasks\Other\Solution.xml:
+  114        <RootComponent type="66" schemaName="msfsi_MicrosoftPCF.TaskVerificationControl" behavior="0" />
+  115:       <RootComponent type="91" id="{a94d11b9-3c69-4804-b043-615f8a8fb2a1}" schemaName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" behavior="0" />
+  116        <RootComponent type="92" id="{a6bea4b2-2b17-ed11-b83e-00224823c9ac}" behavior="0" />
+
+Modules\Onboarding-Essentials\FSIOnboardingEssentialsTasks\PluginAssemblies\MicrosoftCloudForFSIOnboardingEssentialsPlugins-A94D11B9-3C69-4804-B043-615F8A8FB2A1\MicrosoftCloudForFSIOnboardingEssentialsPlugins.dll.data.xml:
+   1  <?xml version="1.0" encoding="utf-8"?>
+   2: <PluginAssembly FullName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginAssemblyId="a94d11b9-3c69-4804-b043-615f8a8fb2a1" CustomizationLevel="1"
+   3    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+   8    <PluginTypes>
+   9:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.DeleteTaskDefinition.DeleteTaskDefinitionPlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="72591ac6-6d5c-453d-858f-af75620dfbb8" Name="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.DeleteTaskDefinition.DeleteTaskDefinitionPlugin">
+  10        <FriendlyName>edc7a082-f76c-473c-a6c3-e5f2561129ad</FriendlyName>
+  11      </PluginType>
+  12:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.GetTasks.GetTasksPlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="11f5d567-293e-4e38-99cd-7debf8cd333c" Name="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.GetTasks.GetTasksPlugin">
+  13        <FriendlyName>5efb696a-0ed9-4cee-a9ad-15b2baba7a3e</FriendlyName>
+  14      </PluginType>
+  15:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.OnboardingForm.OnboardingFormRetrieveMultiplePlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="8ba919d5-db23-4922-96a9-3a584a25846e" Name="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.OnboardingForm.OnboardingFormRetrieveMultiplePlugin">
+  16        <FriendlyName>87212c8d-8826-41e0-a159-115c31e0d5bc</FriendlyName>
+  17      </PluginType>
+  18:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.OnboardingForm.OnboardingFormRetrievePlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="e6977af3-b368-416e-bf20-883c253f8ec6" Name="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.OnboardingForm.OnboardingFormRetrievePlugin">
+  19        <FriendlyName>4da37523-e4c5-41fe-9ada-b1c7e4aad0dc</FriendlyName>
+  20      </PluginType>
+  21:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.UpdateTaskComment.UpdateTaskCommentPlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="cad17a79-0295-4b4f-b020-51d6a3f36145" Name="Microsoft.CloudForFSI.OnboardingEssentials.Plugins.UpdateTaskComment.UpdateTaskCommentPlugin">
+  22        <FriendlyName>fbee37af-7e23-4dc6-8341-f21d50b617be</FriendlyName>
+
+Modules\Onboarding-Essentials\FSIOnboardingEssentialsTasks\SdkMessageProcessingSteps\{a6bea4b2-2b17-ed11-b83e-00224823c9ac}.xml:
+  3    <SdkMessageId>a1bdbb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.OnboardingEssentials.Plugins.DeleteTaskDefinition.DeleteTaskDefinitionPlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>72591ac6-6d5c-453d-858f-af75620dfbb8</PluginTypeId>
+
+Modules\Onboarding-Essentials\FSIOnboardingEssentialsTasks\SdkMessageProcessingSteps\{c4c04346-d2b2-ed11-83fe-002248049a2f}.xml:
+  3    <SdkMessageId>20bebb1b-ea3e-db11-86a7-000a3a5473e8</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.OnboardingEssentials.Plugins.UpdateTaskComment.UpdateTaskCommentPlugin, Microsoft.CloudForFSI.OnboardingEssentials.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>cad17a79-0295-4b4f-b020-51d6a3f36145</PluginTypeId>
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\Other\Solution.xml:
+  146        <RootComponent type="61" schemaName="msfsi_PluginResources/RetailBankingComponentsLabels.nl-NL.resx" behavior="0" />
+  147:       <RootComponent type="91" id="{5df2c9b1-2503-45d8-a921-15a3ca60d6dd}" schemaName="Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" behavior="0" />
+  148        <RootComponent type="92" id="{1e08c88a-fe74-eb11-a812-000d3a37da6b}" behavior="0" />
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\PluginAssemblies\MicrosoftCloudForFSIFSIRetailBankingCoreComponentsPlugins-5DF2C9B1-2503-45D8-A921-15A3CA60D6DD\MicrosoftCloudForFSIFSIRetailBankingCoreComponentsPlugins.dll.data.xml:
+   1  <?xml version="1.0" encoding="utf-8"?>
+   2: <PluginAssembly FullName="Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginAssemblyId="5df2c9b1-2503-45d8-a921-15a3ca60d6dd" CustomizationLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   3    <IsolationMode>2</IsolationMode>
+
+   7    <PluginTypes>
+   8:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.EntityFetch.BuildFHEntityCollectionPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="a1a0fa53-1c25-4169-8942-df6aa84c5362" Name="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.EntityFetch.BuildFHEntityCollectionPlugin">
+   9        <FriendlyName>fe9761a9-d141-423f-836e-83c413ffe489</FriendlyName>
+  10      </PluginType>
+  11:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.EntityFetch.BuildGroupFHEntityCollectionPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="9057be16-7824-4bc6-b3a8-886478f46c17" Name="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.EntityFetch.BuildGroupFHEntityCollectionPlugin">
+  12        <FriendlyName>b580112a-0469-4a94-abf4-ed02eec9bc66</FriendlyName>
+  13      </PluginType>
+  14:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.AddGroupPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="bece01b4-4d5d-458d-9054-89002f01be22" Name="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.AddGroupPlugin">
+  15        <FriendlyName>af035dd9-6e16-4634-bd44-4774e4a82c92</FriendlyName>
+  16      </PluginType>
+  17:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.DeleteGroupPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="39316d99-3d8d-444c-8d47-73c6c7901c34" Name="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.DeleteGroupPlugin">
+  18        <FriendlyName>9bcc98a5-b79f-4c0d-9d3f-408ae072ea64</FriendlyName>
+  19      </PluginType>
+  20:     <PluginType AssemblyQualifiedName="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.UpdateGroupPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13" PluginTypeId="0340c098-22ca-4e56-b310-95bc61aeb144" Name="Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.UpdateGroupPlugin">
+  21        <FriendlyName>db58ddd5-c023-4141-b9ea-fe6b29e3721d</FriendlyName>
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\SdkMessageProcessingSteps\{1e08c88a-fe74-eb11-a812-000d3a37da6b}.xml:
+  3    <SdkMessageId>9e5dc3e8-8974-eb11-a812-000d3a36d396</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.UpdateGroupPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>0340c098-22ca-4e56-b310-95bc61aeb144</PluginTypeId>
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\SdkMessageProcessingSteps\{7f18d47d-fe74-eb11-a812-000d3a37da6b}.xml:
+  3    <SdkMessageId>53b87ba6-8974-eb11-a812-000d3a36d396</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.AddGroupPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>bece01b4-4d5d-458d-9054-89002f01be22</PluginTypeId>
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\SdkMessageProcessingSteps\{96e9ae84-fe74-eb11-a812-000d3a37da6b}.xml:
+  3    <SdkMessageId>94dbd118-8a74-eb11-a812-000d3a36d396</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.Groups.Plugins.DeleteGroupPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>39316d99-3d8d-444c-8d47-73c6c7901c34</PluginTypeId>
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\SdkMessageProcessingSteps\{a94ea22a-e67a-ec11-8d21-00224808307f}.xml:
+  3    <SdkMessageId>768870a9-e57a-ec11-8d21-002248083308</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.EntityFetch.BuildGroupFHEntityCollectionPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>9057be16-7824-4bc6-b3a8-886478f46c17</PluginTypeId>
+
+Modules\UCP-Retail-Banking\FSIRetailBankingCoreComponents\SdkMessageProcessingSteps\{cb166d2c-e46c-ec11-8943-000d3a309c69}.xml:
+  3    <SdkMessageId>c94266bb-e36c-ec11-8943-000d3a3099c3</SdkMessageId>
+  4:   <PluginTypeName>Microsoft.CloudForFSI.UnifiedCustomerProfile.Plugins.EntityFetch.BuildFHEntityCollectionPlugin, Microsoft.CloudForFSI.FSIRetailBankingCoreComponents.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ae4d7facd40d7d13</PluginTypeName>
+  5    <PluginTypeId>a1a0fa53-1c25-4169-8942-df6aa84c5362</PluginTypeId>

@@ -38,15 +38,19 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\FSIDocumentIntelligenceAnchor\FSIDocumentIntelligenceAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIDocumentCommonDataModel\FSIDocumentCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIDocumentIntelligenceDataModel\FSIDocumentIntelligenceDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIDocumentIntelligenceCore\FSIDocumentIntelligenceCore.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\FSIDocumentIntelligenceControls\FSIDocumentIntelligenceControls.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
+    <ProjectReference Include="..\FSIDocumentIntelligenceAnchor\FSIDocumentIntelligenceAnchor.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIDocumentCommonDataModel\FSIDocumentCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIDocumentIntelligenceDataModel\FSIDocumentIntelligenceDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIDocumentIntelligenceCore\FSIDocumentIntelligenceCore.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\FSIDocumentIntelligenceControls\FSIDocumentIntelligenceControls.csproj" Condition="'$(TF_BUILD)' == 'False'" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
   </ItemGroup>
 
 </Project>

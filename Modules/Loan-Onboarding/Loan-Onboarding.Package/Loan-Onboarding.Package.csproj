@@ -75,10 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesCommonDataModel\FSIFinancialServicesCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
-    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentCommonDataModel\FSIDocumentCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceDataModel\FSIDocumentIntelligenceDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceCore\FSIDocumentIntelligenceCore.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceControls\FSIDocumentIntelligenceControls.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
+    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentCommonDataModel\FSIDocumentCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceDataModel\FSIDocumentIntelligenceDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceCore\FSIDocumentIntelligenceCore.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceControls\FSIDocumentIntelligenceControls.csproj" Condition="'$(TF_BUILD)' == 'False'" />
     <ProjectReference Include="..\..\Onboarding-Essentials\FSIOnboardingEssentialsDataModel\FSIOnboardingEssentialsDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
     <ProjectReference Include="..\..\Onboarding-Essentials\FSIOnboardingEssentialsBase\FSIOnboardingEssentialsBase.csproj" Condition="'$(TF_BUILD)' == 'False'" />
     <ProjectReference Include="..\..\Onboarding-Essentials\FSIApplicationQueueControl\FSIApplicationQueueControl.csproj" Condition="'$(TF_BUILD)' == 'False'" />
@@ -92,5 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
   </ItemGroup>
 </Project>

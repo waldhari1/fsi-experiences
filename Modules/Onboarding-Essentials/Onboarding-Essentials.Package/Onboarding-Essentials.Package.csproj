@@ -64,8 +64,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentCommonDataModel\FSIDocumentCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
-    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceDataModel\FSIDocumentIntelligenceDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'"/>
+    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentCommonDataModel\FSIDocumentCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
+    <ProjectReference Include="..\..\DocumentIntelligence\FSIDocumentIntelligenceDataModel\FSIDocumentIntelligenceDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
     <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesCommonDataModel\FSIFinancialServicesCommonDataModel.csproj" Condition="'$(TF_BUILD)' == 'False'" />
     <ProjectReference Include="..\..\Banking-Data-Model\FSIFinancialServicesConfiguration\FSIFinancialServicesConfiguration.csproj" Condition="'$(TF_BUILD)' == 'False'" />
     <ProjectReference Include="..\..\Banking-Data-Model\FSICommonSecurityRoles\FSICommonSecurityRoles.csproj" Condition="'$(TF_BUILD)' == 'False'" />
@@ -80,6 +80,10 @@
 
   <ItemGroup>
     <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
   </ItemGroup>
 
 </Project>
