@@ -16,4 +16,8 @@
     <ProjectReference Include="..\..\..\frontend\pcf-controls\FinancialHoldingInformationControl\FinancialHoldingInformationControl.pcfproj" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf" Version="9.1.0.84" />
+  </ItemGroup>
+
 </Project>
