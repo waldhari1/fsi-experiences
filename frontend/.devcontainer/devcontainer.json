@@ -1,0 +1,13 @@
+{
+    "name": "fsi-experiences",
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+    ],
+    "postCreateCommand": "pnpm install && pnpm build-libs",
+    "remoteUser": "vscode"
+}

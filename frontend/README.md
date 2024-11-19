@@ -47,3 +47,17 @@ A workspace which holds all the frontend libraries, apps, and controls
   ```
   pnpm start-pcf-wizard
   ```  
+
+# Setting up a Codespace
+To set up a Codespace for this repository, follow these steps:
+
+1. Open the repository in GitHub.
+2. Click on the "Code" button and select "Open with Codespaces".
+3. If you don't have a Codespace created yet, click on "New Codespace".
+4. Wait for the Codespace to be created and started.
+5. Once the Codespace is ready, open a terminal in VS Code.
+6. Run the following command to install dependencies and build the project:
+   ```
+   pnpm install && pnpm build-libs
+   ```
+7. You are now ready to start developing in the Codespace.

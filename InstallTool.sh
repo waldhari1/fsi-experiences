@@ -28,3 +28,11 @@ status=$?
 [ $status -eq 0 ] && echo "buid libs command was successful" || exit 1
 
 cd $location
+
+#----------------Setting up Codespace---------------
+if [ "$1" == "codespace" ]; then
+    cd $location/frontend/
+    pnpm install && pnpm build-libs
+    status=$?
+    [ $status -eq 0 ] && echo "Codespace setup was successful" || exit 1
+fi

@@ -36,4 +36,18 @@ call pnpm i --frozen-lockfile
 :skipPCFNPM
 cd %location%
 echo %date%, %time%  finished installing js successfully
+
+::----------------Setting up Codespace---------------
+IF "%1" == "codespace" (
+    cd %location%\frontend\
+    call pnpm install && pnpm build-libs
+
+    IF %errorlevel% gtr 0 (
+        echo %date%, %time%  Codespace setup failed! %errorlevel%
+        EXIT 1
+    ) ELSE (
+        echo %date%, %time%  Codespace setup was successful
+    )
+)
+
 EXIT 0
